@@ -1,4 +1,4 @@
-module csvloader
+module github.com/Atsu06/csvloader
 
 go 1.23.0
 
