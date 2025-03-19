@@ -4,21 +4,13 @@ import (
 	"csvloader/csvloader"
 	"fmt"
 	"log"
-	"os"
 )
 
 func main() {
 	// サンプルCSVデータ
 	csvFile := "example.csv"
 
-	// ファイルを開く
-	file, err := os.Open(csvFile)
-	if err != nil {
-		log.Fatalf("failed to open file: %v", err)
-	}
-	defer file.Close()
-
-	// CSVをパース
+	// CSVを開く
 	data, err := csvloader.OpenCSV(csvFile, "utf-8")
 	if err != nil {
 		log.Fatalf("failed to load CSV: %v", err)
